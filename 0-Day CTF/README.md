@@ -1,17 +1,23 @@
 # ✅ TryHackMe CTF Walkthrough: 0day
 
-This is a walkthrough of how I solved the **0day CTF** on TryHackMe.
+This repository contains a detailed walkthrough of the **0day CTF** I completed on TryHackMe, showcasing a full exploitation path from initial access to privilege escalation and flag capture.
 
 ---
 
-## 🎯 Overview
+## 🎯 Room Overview
 
-In this challenge, the goal was to perform full exploitation of a vulnerable machine by leveraging known vulnerabilities, gaining user and root access, and capturing flags.  
-The walkthrough covers steps including reconnaissance, vulnerability discovery, exploitation, privilege escalation, and final capture of flags.
+The **0day CTF** is designed to simulate a real-world vulnerable machine exploitation scenario.  
+It focuses on the following key areas:
+
+- **Reconnaissance** – Discover open services and gather information about the target system.  
+- **Vulnerability Identification** – Use automated tools and manual techniques to identify known vulnerabilities.  
+- **Exploitation** – Leverage Metasploit and manual methods to exploit vulnerabilities and gain system access.  
+- **Privilege Escalation** – Identify weaknesses in the system configuration or software versions to escalate privileges.  
+- **Flag Capture** – Extract user and root flags to complete the challenge.
 
 ---
 
-## 🚀 Step-by-Step Walkthrough
+## 📚 Step-by-Step Walkthrough
 
 1. Connect With the TryHackMe server using Command:  
    ```bash
@@ -62,11 +68,33 @@ The walkthrough covers steps including reconnaissance, vulnerability discovery, 
 
 ---
 
-## 🎯 Final Outcome
+## 🎯 Skills Gained
+
+- Hands-on experience with **VPN connectivity and network reconnaissance**.  
+- Mastered vulnerability scanning using **Nmap and Nikto**.  
+- Practical exploitation of **Shellshock vulnerability** with **Metasploit**.  
+- Real-world **privilege escalation** techniques via kernel exploits.  
+- Flag capture and report preparation.
+
+---
+
+## ⚡ Final Outcome
 
 - Successfully exploited **Shellshock vulnerability** using Metasploit.  
 - Performed **privilege escalation** by compiling and running a public exploit for the old kernel version.  
 - Retrieved both **user and root flags**.
+
+---
+
+## 🔗 Room Link
+
+[0day – TryHackMe](https://tryhackme.com/room/0day)
+
+---
+
+## 📸 Screenshots
+
+*(Add relevant screenshots such as Nmap results, Nikto scan output, Metasploit console, successful exploit, and flag retrieval here.)*
 
 ---
 
