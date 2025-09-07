@@ -6,6 +6,7 @@
 The **RootMe CTF** on TryHackMe is an engaging challenge designed to teach beginners and intermediate users how to exploit common vulnerabilities in web applications and escalate privileges on Linux systems. It focuses on enumeration, file upload vulnerabilities, and privilege escalation techniques that mirror real-world penetration testing scenarios.
 
 Throughout this room, I learned how to:
+
 ✔ Perform network scanning and service enumeration  
 ✔ Identify vulnerable web directories through directory busting  
 ✔ Exploit file upload restrictions by bypassing file extension filters  
