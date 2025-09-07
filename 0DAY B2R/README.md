@@ -92,12 +92,6 @@ It focuses on the following key areas:
 
 ---
 
-## 📸 Screenshots
-
-*(Add relevant screenshots such as Nmap results, Nikto scan output, Metasploit console, successful exploit, and flag retrieval here.)*
-
----
-
 ## 👤 Author
 
 **Harbeer-Singh**
